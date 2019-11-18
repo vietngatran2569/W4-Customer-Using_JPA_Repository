@@ -8,8 +8,10 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface CustomerService {
-//    Iterable<Customer> findAll();
-      Page<Customer> findAll(Pageable pageable);
+    //    Iterable<Customer> findAll();
+    Page<Customer> findAll(Pageable pageable);
+
+    Page<Customer> findAllByFirstNameContraining(String firstname, Pageable pageable);
 
     Customer findById(Long id);
 
